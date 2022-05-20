@@ -1,0 +1,87 @@
+/*Init by React JS */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+/*set the modes of views */
+.dark-mode {background: #000000;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   }
+.dark-mode h1, 
+.dark-mode h2, 
+.dark-mode p { color: #fafafa; }
+.dark-mode p b { color: #f1d248; }
+.dark-mode .Character { border: 1px solid #fafafa; }
+.light-mode {  background: #654ea3;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #eaafc8, #654ea3);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #eaafc8, #654ea3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+; }
+
+
+/*Painting the views */
+
+
+.button1 {
+  width: 100px;
+  padding: .3rem;
+  position: relative;
+  bottom: 55px;
+  left: 600px;
+  --color: #ffffff;
+  background-color: transparent;
+  border-radius: 30px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: .5s;
+  font-weight: 400;
+  font-size: 14px;
+  border: 1px solid;
+  font-family: inherit;
+  text-transform: uppercase;
+  color: var(--color);
+  z-index: 1;
+ }
+ 
+ .button1::before, .button::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color:#c536ca;
+  transition: 1s ease;
+ }
+ 
+ .button1::before {
+  top: -1em;
+  left: -1em;
+ }
+ 
+ .button1::after {
+  left: calc(100% + 1em);
+  top: calc(100% + 1em);
+ }
+ 
+ .button1:hover::before, .button:hover::after {
+  height: 410px;
+  width: 410px;
+ }
+ 
+ 
+ .button1:active {
+  filter: brightness(.8);
+ }
